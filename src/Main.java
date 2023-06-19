@@ -10,7 +10,7 @@ public class Main {
 	 * ici le booléen sert à selectionné quelles informations
 	 * utiliser pour la connection (PostgreSQl, ou Mysql)
 	 */
-	private static final boolean PostgreSQL = false;
+	private static final boolean POSTGRE_SQL = false;
 
 	private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
 	private static final String POSTGRES_URL = "jdbc:postgresql://127.0.0.1:5432/base";
@@ -25,7 +25,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		try {
 			Connection db;
-			if (Main.PostgreSQL) {
+			if (Main.POSTGRE_SQL) {
 				Class.forName(POSTGRES_DRIVER);
 				db = DriverManager.getConnection(POSTGRES_URL, POSTGRES_USERNAME, POSTGRES_PASSWORD);
 			} else {
