@@ -79,7 +79,8 @@ public class Main {
 			// statement.executeUpdate("INSERT INTO Utilisateurs VALUES (DEFAULT, 'Client
 			// n°1', 'Lastname', 'Firstname', 'monsuper@email.com', 'monSuperLogin',
 			// 'fakePassword')");
-			// statement.executeUpdate("INSERT INTO Utilisateurs VALUES (DEFAULT, 'Client n°2', 'Alexis', 'isHere', 'alexis@m.z', 'admin', '')");
+			// statement.executeUpdate("INSERT INTO Utilisateurs VALUES (DEFAULT, 'Client
+			// n°2', 'Alexis', 'isHere', 'alexis@m.z', 'admin', '')");
 			// connection effectuer, opération ici
 			ResultSet result = statement.executeQuery("SELECT * FROM Utilisateurs;");
 			ResultSetMetaData meta = result.getMetaData();
@@ -101,6 +102,7 @@ public class Main {
 				System.out.println(id + ", " + number + ", " + lastname + ", " + firstname + ", " + email + ", " + login
 						+ ", " + password);
 			}
+
 			System.out.println("Hello, World!");
 
 			db.close();
