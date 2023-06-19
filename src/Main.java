@@ -7,7 +7,7 @@ public class Main {
 
 	private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
 	private static final String POSTGRES_URL = "jdbc:postgresql://127.0.0.1:5432/base";
-	private static final String POSTGRES_USERNAME = "admin";
+	private static final String POSTGRES_USERNAME = "root";
 	private static final String POSTGRES_PASSWORD = "root";
 
 	private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
