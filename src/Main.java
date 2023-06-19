@@ -7,7 +7,14 @@ public class Main {
 	private static final String MYSQL_USERNAME = "**";
 	private static final String MYSQL_PASSWORD = "";
 
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
+	public static void main(String[] args) throws Exception {
+
+		// Class.forName("com.mysql.cj.jdbc.Driver");
+
+		// Connection conn =
+		// DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSl=false",
+		// "root", "");
+
+		System.out.println("Hello, World!");
+	}
 }
