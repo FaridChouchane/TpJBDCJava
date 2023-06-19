@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 public class Main {
 	// pas d'utilisation de postgresql donc false
 	/**
-	 * ici le booléen sert à selectionné quels informations
+	 * ici le booléen sert à selectionné quelles informations
 	 * utiliser pour la connection (PostgreSQl, ou Mysql)
 	 */
 	private static final boolean PostgreSQL = false;
