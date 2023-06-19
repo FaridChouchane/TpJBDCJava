@@ -5,7 +5,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
-	private static final boolean PostgreSQL = true;
+	// pas d'utilisation de postgresql donc false
+	/**
+	 * ici le booléen sert à selectionné quels informations
+	 * utiliser pour la connection (PostgreSQl, ou Mysql)
+	 */
+	private static final boolean PostgreSQL = false;
 
 	private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
 	private static final String POSTGRES_URL = "jdbc:postgresql://127.0.0.1:5432/base";
@@ -35,5 +40,6 @@ public class Main {
 		} catch (ClassNotFoundException | SQLException ex) {
 			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
 		}
+
 	}
 }
