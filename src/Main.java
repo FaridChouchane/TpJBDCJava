@@ -17,7 +17,7 @@ public class Main {
 	private static final String POSTGRES_USERNAME = "root";
 	private static final String POSTGRES_PASSWORD = "root";
 
-	private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
+	// private static final String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
 	private static final String MYSQL_URL = "jdbc:mysql://localhost:3306?useSSl=false";
 	private static final String MYSQL_USERNAME = "root";
 	private static final String MYSQL_PASSWORD = "";
@@ -29,7 +29,7 @@ public class Main {
 				Class.forName(POSTGRES_DRIVER);
 				db = DriverManager.getConnection(POSTGRES_URL, POSTGRES_USERNAME, POSTGRES_PASSWORD);
 			} else {
-				Class.forName(MYSQL_DRIVER);
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				db = DriverManager.getConnection(MYSQL_URL, MYSQL_USERNAME, MYSQL_PASSWORD);
 			}
 
