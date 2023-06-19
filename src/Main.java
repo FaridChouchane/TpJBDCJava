@@ -79,15 +79,28 @@ public class Main {
 			// statement.executeUpdate("INSERT INTO Utilisateurs VALUES (DEFAULT, 'Client
 			// n°1', 'Lastname', 'Firstname', 'monsuper@email.com', 'monSuperLogin',
 			// 'fakePassword')");
+			// statement.executeUpdate("INSERT INTO Utilisateurs VALUES (DEFAULT, 'Client n°2', 'Alexis', 'isHere', 'alexis@m.z', 'admin', '')");
 			// connection effectuer, opération ici
 			ResultSet result = statement.executeQuery("SELECT * FROM Utilisateurs;");
 			ResultSetMetaData meta = result.getMetaData();
 
-			System.out.println("table name : " + meta.getTableName(1));
-			for (int i = 0; i < meta.getColumnCount(); i++) {
-				System.out.println(meta.getColumnName(i + 1));
+			System.out.print(meta.getTableName(1) + ": ");
+			int imax = meta.getColumnCount();
+			for (int i = 0; i < imax; i++) {
+				System.out.print(meta.getColumnName(i + 1) + ((i != imax - 1) ? ", " : "\n"));
 			}
 
+			while (result.next()) {
+				String id = result.getString("id");
+				String number = result.getString("number");
+				String lastname = result.getString("lastname");
+				String firstname = result.getString("firstname");
+				String email = result.getString("email");
+				String login = result.getString("login");
+				String password = result.getString("password");
+				System.out.println(id + ", " + number + ", " + lastname + ", " + firstname + ", " + email + ", " + login
+						+ ", " + password);
+			}
 			System.out.println("Hello, World!");
 
 			db.close();
