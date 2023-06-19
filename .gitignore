@@ -2,3 +2,5 @@
 /build/
 /nbproject/
 /src/*.class
+build.xml
+manifest.mf
